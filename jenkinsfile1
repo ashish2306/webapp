@@ -24,7 +24,7 @@ pipeline{
                 echo "========executing A========"
             }
         }
-        ..//
+        
         stage("Deploy on prod"){
             steps{
                 //deploy on container -> plugin
@@ -33,7 +33,7 @@ pipeline{
             }
         }
            
-           //..
+        
     }
     
      post{
