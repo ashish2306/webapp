@@ -4,14 +4,6 @@ pipeline{
         maven 'Maven-3.6.3'
     }
     stages{
-        stage("Git Code cloning"){
-            steps{
-                echo "Cloning the code"
-                git url: "https://git repo url", branch: "main"
-
-            }
-            
-        }
         stage("Built"){
            steps{
             echo "Building Image"
