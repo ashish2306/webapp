@@ -10,10 +10,8 @@ pipeline{
         stage("Git Code cloning"){
             steps{
                 echo "Cloning the code"
-                git url: "https://git repo url", branch: "main"
                 slackSend channel: "${slack_channel}", message: 'job started cloning'
             
-
             }
             
         }
