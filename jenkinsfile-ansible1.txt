@@ -38,4 +38,17 @@ pipeline{
        
         }
     }
+post{
+                always{
+                    echo "========Always========"
+                }
+                success{
+                    slackSend channel: "${slack_channel}", message: 'job success'
+                    echo "========A executed successfully========"
+                }
+                failure{
+                    echo "========A execution failed========"
+                    slackSend channel: "${slack_channel}", message: 'job failed'
+                }
+        }
 }
